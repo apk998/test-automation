@@ -1,7 +1,7 @@
-package com.solvd.testautomation;
+package com.solvd.testautomation.api;
 
-import com.solvd.testautomation.api.GetCurrentWeatherByCoordinates;
-import com.solvd.testautomation.domain.Coordinate;
+import com.solvd.testautomation.api.method.GetCurrentWeatherByCoordinates;
+import com.solvd.testautomation.api.domain.Coordinate;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 import org.testng.Assert;
@@ -53,7 +53,7 @@ public class GetCurrentWeatherByCoordinatesTest {
                 new GetCurrentWeatherByCoordinates(coordinate.getLatitude(), coordinate.getLongitude());
         weather.addProperty("coordinate", coordinate);
 
-        String apiKey = String.valueOf(Configuration.get("APIkey"));
+        String apiKey = String.valueOf(Configuration.get("api_key"));
         weather.expectResponseStatus(HttpResponseStatusType.UNAUTHORIZED_401);
 
         weather.removeProperty("appid");

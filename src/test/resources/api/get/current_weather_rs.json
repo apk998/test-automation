@@ -1,8 +1,8 @@
 
 {
   "coord": {
-    "latitude": "${coordinate.latitude}",
-    "longitude": "${coordinate.longitude}"
+    "lat": "${coordinate.latitude}",
+    "lon": "${coordinate.longitude}"
   },
   "weather": [
     {

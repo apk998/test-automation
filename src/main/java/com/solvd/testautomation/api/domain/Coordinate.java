@@ -1,4 +1,4 @@
-package com.solvd.testautomation.domain;
+package com.solvd.testautomation.api.domain;
 
 public class Coordinate {
     private double latitude;

@@ -4,7 +4,7 @@
 <suite name="weather_suite" verbose="1" parallel="tests" thread-count="10">
     <test name="GetCurrentWeatherByCoordinatesTest">
         <classes>
-            <class name="com.solvd.testautomation.GetCurrentWeatherByCoordinatesTest"/>
+            <class name="com.solvd.testautomation.api.GetCurrentWeatherByCoordinatesTest"/>
         </classes>
     </test>
 </suite>
