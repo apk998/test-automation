@@ -2,6 +2,7 @@ package com.solvd.testautomation.web;
 
 import com.solvd.testautomation.web.components.ProductCard;
 import com.solvd.testautomation.web.components.SearchLineComponent;
+import com.zebrunner.carina.core.AbstractTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,9 +10,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-import static com.zebrunner.agent.core.webdriver.RemoteWebDriverFactory.getDriver;
-
-public class HomePageTest {
+public class HomePageTest extends AbstractTest {
 
     @Test
     public void verifySearchLineTest() {
@@ -40,5 +39,20 @@ public class HomePageTest {
         }
 
         sa.assertAll();
+    }
+
+    @Test
+    public void verifyNavigationTest() {
+
+    }
+
+    @Test
+    public void verifyFilterTest() {
+
+    }
+
+    @Test
+    public void verifyFooterLinkTest() {
+
     }
 }
