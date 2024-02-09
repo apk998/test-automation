@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sanrio_test_suite">
+
+    <test name="HomePageTests">
+        <classes>
+            <class name="com.solvd.testautomation.web.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="LoginPageTests">
+        <classes>
+            <class name="com.solvd.testautomation.web.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="ShoppingCartTests">
+        <classes>
+            <class name="com.solvd.testautomation.web.ShoppingCartTest"/>
+        </classes>
+    </test>
+
+</suite>
