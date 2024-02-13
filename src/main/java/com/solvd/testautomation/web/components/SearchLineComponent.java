@@ -9,22 +9,22 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchLineComponent extends AbstractUIObject {
 
-    @FindBy(xpath = ".[@class = 'search__fields']")
+    @FindBy(xpath = ".//[@class = 'search__fields']")
     private ExtendedWebElement searchInput;
 
-    @FindBy(xpath = ".[@class = 'search__fields']//span[@class = 'icon ']")
+    @FindBy(xpath = ".//[@class = 'search__fields']//span[@class = 'icon ']")
     private ExtendedWebElement searchButton;
 
     public SearchLineComponent(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
-    public ExtendedWebElement getSearchInput() {
-        return searchInput;
+    public boolean isSearchInputDisplayed() {
+        return searchInput.isElementPresent(1);
     }
 
-    public ExtendedWebElement getSearchButton() {
-        return searchButton;
+    public boolean isSearchButtonDisplayed() {
+        return searchButton.isElementPresent(1);
     }
 
     public String getSearchInputPlaceholder() {
