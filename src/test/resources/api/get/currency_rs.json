@@ -1,6 +1,6 @@
 {
-  "new_amount": "type:Float",
+  "new_amount": "type:Double",
   "new_currency": "${currency.want}",
   "old_currency": "${currency.have}",
-  "old_amount": "${currency.amount}"
+  "old_amount": "type:Double"
 }
