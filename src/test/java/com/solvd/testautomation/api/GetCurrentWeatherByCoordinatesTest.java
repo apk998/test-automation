@@ -53,7 +53,7 @@ public class GetCurrentWeatherByCoordinatesTest {
                 new GetCurrentWeatherByCoordinates(coordinate.getLatitude(), coordinate.getLongitude());
         weather.addProperty("coordinate", coordinate);
 
-        String apiKey = String.valueOf(Configuration.get("api_key"));
+        String apiKey = String.valueOf(Configuration.get("api_key1"));
         weather.expectResponseStatus(HttpResponseStatusType.UNAUTHORIZED_401);
 
         weather.removeProperty("appid");

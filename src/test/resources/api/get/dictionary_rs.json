@@ -1,0 +1,5 @@
+{
+  "definition": "type:String",
+  "word": "${word.word}",
+  "valid": "type:Boolean"
+}
