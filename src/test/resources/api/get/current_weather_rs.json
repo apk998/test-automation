@@ -19,15 +19,12 @@
     "temp_min": "type:Double",
     "temp_max": "type:Double",
     "pressure": "type:Integer",
-    "humidity": "type:Integer",
-    "sea_level": "type:Integer",
-    "grnd_level": "type:Integer"
+    "humidity": "type:Integer"
   },
   "visibility": "type:Integer",
   "wind": {
     "speed": "type:Double",
-    "deg": "type:Integer",
-    "gust": "type:Double"
+    "deg": "type:Integer"
   },
   "clouds": {
     "all": "type:Integer"

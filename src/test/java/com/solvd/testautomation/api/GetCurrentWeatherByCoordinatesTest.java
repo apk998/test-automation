@@ -4,6 +4,7 @@ import com.solvd.testautomation.api.method.GetCurrentWeatherByCoordinates;
 import com.solvd.testautomation.api.domain.Coordinate;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
+import org.checkerframework.checker.units.qual.C;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
