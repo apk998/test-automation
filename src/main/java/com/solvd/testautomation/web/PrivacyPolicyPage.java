@@ -17,4 +17,8 @@ public class PrivacyPolicyPage extends AbstractPage {
     public boolean isPrivacyPolicyPageDisplayed() {
         return pageTitle.isElementPresent(1);
     }
+
+    public String getTitleText() {
+        return pageTitle.getText();
+    }
 }

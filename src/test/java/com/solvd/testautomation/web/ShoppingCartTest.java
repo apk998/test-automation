@@ -3,12 +3,13 @@ package com.solvd.testautomation.web;
 import com.solvd.testautomation.web.components.Header;
 import com.zebrunner.carina.core.AbstractTest;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class ShoppingCartTest extends AbstractTest {
 
-    @Test
+    @Test(description = "verify that shopping cart/bag icon displays correct number of items")
     public void verifyAddToCartTest() {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
@@ -28,7 +29,7 @@ public class ShoppingCartTest extends AbstractTest {
         sa.assertAll();
     }
 
-    @Test
+    @Test(description = "verify that cart summary updates accordingly when removing items")
     public void verifyItemRemovalTest() {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
@@ -38,6 +39,10 @@ public class ShoppingCartTest extends AbstractTest {
 
         ProductPage productPage = new ProductPage(driver);
         productPage.addToCart();
+
+        Header header = new HomePage(driver).getHeader();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(header.getCartItemCountElement()).perform();
 
         ShoppingCartPage cartPage = new ShoppingCartPage(driver);
         cartPage.removeCartItem();

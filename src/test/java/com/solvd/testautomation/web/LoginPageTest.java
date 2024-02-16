@@ -8,7 +8,7 @@ import org.testng.asserts.SoftAssert;
 
 public class LoginPageTest extends AbstractTest {
 
-    @Test
+    @Test(description = "verify user registration with valid inputs")
     public void verifyUserRegistrationWithValidInputTest() {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
@@ -32,7 +32,7 @@ public class LoginPageTest extends AbstractTest {
         sa.assertAll();
     }
 
-    @Test
+    @Test(description = "verify user registration with invalid inputs")
     public void verifyUserRegistrationWithInvalidInputTest() {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
@@ -55,7 +55,7 @@ public class LoginPageTest extends AbstractTest {
         sa.assertAll();
     }
 
-    @Test
+    @Test(description = "verify login functionality with valid inputs")
     public void verifyLoginFunctionalityWithValidCredentialsTest() {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
@@ -79,7 +79,7 @@ public class LoginPageTest extends AbstractTest {
         sa.assertAll();
     }
 
-    @Test
+    @Test(description = "verify login functionality with invalid inputs")
     public void verifyLoginFunctionalityWithInvalidCredentialsTest() {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
