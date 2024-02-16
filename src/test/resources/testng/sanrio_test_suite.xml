@@ -1,5 +1,7 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="sanrio_test_suite">
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="sanrio_test_suite" verbose="1" parallel="tests" thread-count="30">
 
     <test name="HomePageTests">
         <classes>
@@ -7,9 +9,21 @@
         </classes>
     </test>
 
+    <test name="IframeTests">
+        <classes>
+            <class name="com.solvd.testautomation.web.IframeTest"/>
+        </classes>
+    </test>
+
     <test name="LoginPageTests">
         <classes>
             <class name="com.solvd.testautomation.web.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="ProductCardTests">
+        <classes>
+            <class name="com.solvd.testautomation.web.ProductCardTest"/>
         </classes>
     </test>
 
