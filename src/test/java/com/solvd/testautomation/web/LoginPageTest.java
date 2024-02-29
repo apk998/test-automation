@@ -1,10 +1,14 @@
 package com.solvd.testautomation.web;
 
+import com.solvd.testautomation.parsers.PasswordParser;
+import com.solvd.testautomation.parsers.UsernameParser;
 import com.solvd.testautomation.web.components.Header;
 import com.zebrunner.carina.core.AbstractTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import java.io.File;
 
 public class LoginPageTest extends AbstractTest {
 
@@ -60,6 +64,9 @@ public class LoginPageTest extends AbstractTest {
         SoftAssert sa = new SoftAssert();
         WebDriver driver = getDriver();
 
+        UsernameParser usernameParser = new UsernameParser(new File("src/main/resources/settings.xml"));
+        PasswordParser passwordParser = new PasswordParser(new File("src/main/resources/settings.xml"));
+
         HomePage homePage = new HomePage(driver);
         homePage.open();
 
@@ -67,8 +74,8 @@ public class LoginPageTest extends AbstractTest {
         header.clickLogin();
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.enterPassword("thomaspaine17370902@gmail.com");
-        loginPage.enterPassword("CommonSense1776");
+        loginPage.enterEmail(usernameParser.parseElement("userEmail", 2));
+        loginPage.enterPassword(passwordParser.parseElement("password", 3));
         loginPage.clickLoginButton();
 
         DashboardPage dashboardPage = new DashboardPage(driver);
