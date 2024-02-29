@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class TikTokPage extends AbstractPage {
 
-    @FindBy(xpath = "//*[@id='policy-card']/div[1]/div[2]")
+    @FindBy(xpath = "//*[@data-e2e='title-privacy-policy']")
     private ExtendedWebElement titleText;
 
     public TikTokPage(WebDriver driver) {

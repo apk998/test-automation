@@ -11,7 +11,7 @@ public class Footer extends AbstractUIObject {
     @FindBy(xpath = "//*[@id='shopify-section-1594663483893']/div/ul/li[1]/a")
     private ExtendedWebElement privacyPolicyLink;
 
-    @FindBy(xpath = "//*[@id='shopify-section-1596121234338']/ul/li[1]/a")
+    @FindBy(xpath = ".//*[@aria-label='Instagram']")
     private ExtendedWebElement instagramButton;
 
     public Footer(WebDriver driver, SearchContext searchContext) {

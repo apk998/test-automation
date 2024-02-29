@@ -10,10 +10,10 @@ public class ShoppingCartPage extends AbstractPage {
     @FindBy(xpath = "//*[@id='Combined- ']")
     private ExtendedWebElement removeItemButton;
 
-    @FindBy(xpath = "//*[@id='ajax-cart__content']/form/div[1]/h2/span")
+    @FindBy(xpath = "//*[@class='cart__count--text']")
     private ExtendedWebElement cartSummary;
 
-    @FindBy(xpath = "//*[@id='shopify-section-cart__main']/section/div[2]/div/h2")
+    @FindBy(xpath = "//*[@class='ajax-cart__empty-text']")
     private ExtendedWebElement emptyStatement;
 
     public ShoppingCartPage(WebDriver driver) {

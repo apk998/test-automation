@@ -28,7 +28,7 @@ public class Header extends AbstractUIObject {
     @FindBy(xpath = "//*[@id='navLink-7']")
     private ExtendedWebElement plushAndToysLink;
 
-    @FindBy(xpath = ".//*/section/div/header/ul[2]/li[3]/a/span[2]/span[2]")
+    @FindBy(xpath = ".//*[@data-bind='itemCount']")
     private ExtendedWebElement cartItemCountElement;
 
 

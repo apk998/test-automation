@@ -16,22 +16,22 @@ public class ProductCard extends AbstractUIObject {
     @FindBy(xpath = ".//*[@class = 'isp_product_info']//*[text()]")
     private ExtendedWebElement titleElement;
 
-    @FindBy(xpath = "//*[@id='shopify-section-collection__main']/div/div[1]/div/div[1]/div[2]/div")
+    @FindBy(xpath = ".//*[@class='product-price']")
     private ExtendedWebElement priceElement;
 
-    @FindBy(xpath = ".//*[@id='shopify-section-collection__main']/div/div[1]/div/div[1]/div[1]/div[1]/div/a/div[1]")
+    @FindBy(xpath = ".//*[@class='product-image__wrapper']")
     private ExtendedWebElement mainImage;
 
     @FindBy(xpath = ".//*[@id='shopify-section-collection__main']/div/div[1]/div/div[1]/div[1]/div[1]/div/a/div[2]/img")
     private ExtendedWebElement hoverImage;
 
-    @FindBy(xpath = "//a[contains(@class, 'add-to-cart-text') and contains(text(), 'SELECT OPTIONS')]")
+    @FindBy(xpath = ".//*[@aria-label='Select Option']")
     private ExtendedWebElement selectOptionsButton;
 
     @FindBy(xpath = "//a[contains(@class, 'add-to-cart-text') and contains(text(), 'SELECT SIZE')]")
     private ExtendedWebElement selectSizeButton;
 
-    @FindBy(xpath = "//div[contains(@class, 'text animated') and contains(text(), 'ADD TO CART')]/ancestor::li")
+    @FindBy(xpath = ".//*[@data-label='ADD TO BAG']")
     private ExtendedWebElement addToCartButton;
 
 
