@@ -22,7 +22,7 @@ public class ShoppingCartTest extends AbstractTest {
         productPage.addToCart();
 
         Header header = homePage.getHeader();
-        int expectedItemCount = 2;   // During the month of February they give an extra freebie
+        int expectedItemCount = 1;
         int actualItemCount = header.getCartItemCount();
 
         sa.assertEquals(actualItemCount, expectedItemCount, "Cart icon does not display the correct number of items");
